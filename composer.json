@@ -8,27 +8,32 @@
     ],
     "config": {
         "preferred-install": "dist",
-        "sort-packages": true
+        "sort-packages": true,
+        "secure-http": false,
+        "platform": {
+            "php": "7.3.13",
+            "ext-zip": "7.3.13",
+            "ext-intl": "7.3.13"
+        }
     },
     "require": {
-        "magento/product-community-edition": "2.3.5-p1",
         "cweagans/composer-patches": "1.6.7",
+        "magento/data-migration-tool": "2.3.5",
+        "magento/product-community-edition": "2.3.5-p1",
         "mdoq/module-connector": "^1.4",
-        "zero1/magento2-release-library": "^1.0",
         "smile/elasticsuite": "2.9.0",
-        "zero1limited/sub-category-list": "^1.0"                
+        "zero1/magento2-release-library": "^1.0",
+        "zero1limited/base": "^1.0",
+        "zero1limited/sub-category-list": "^1.0"
     },
     "require-dev": {
         "allure-framework/allure-phpunit": "~1.2.0",
-        "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
         "friendsofphp/php-cs-fixer": "~2.14.0",
         "lusitanian/oauth": "~0.8.10",
-        "magento/magento-coding-standard": "*",
-        "magento/magento2-functional-testing-framework": "~2.6.4",
+        "magento/magento-coding-standard": "~3.0.0",
+        "magento/magento2-functional-testing-framework": "2.4.5",
         "pdepend/pdepend": "2.5.2",
-        "phpcompatibility/php-compatibility": "^9.3",
         "phpmd/phpmd": "@stable",
-        "phpstan/phpstan": "^0.12.2",
         "phpunit/phpunit": "~6.5.0",
         "sebastian/phpcpd": "~3.0.0",
         "squizlabs/php_codesniffer": "~3.4.0"
@@ -36,6 +41,7 @@
     "conflict": {
         "gene/bluefoot": "*"
     },
+
     "autoload": {
         "psr-4": {
             "Magento\\Framework\\": "lib/internal/Magento/Framework/",
@@ -64,19 +70,23 @@
             "Magento\\Tools\\": "dev/tools/Magento/Tools/",
             "Magento\\Tools\\Sanity\\": "dev/build/publication/sanity/Magento/Tools/Sanity/",
             "Magento\\TestFramework\\Inspection\\": "dev/tests/static/framework/Magento/TestFramework/Inspection/",
-            "Magento\\TestFramework\\Utility\\": "dev/tests/static/framework/Magento/TestFramework/Utility/",
-            "Magento\\PhpStan\\": "dev/tests/static/framework/Magento/PhpStan/"
+            "Magento\\TestFramework\\Utility\\": "dev/tests/static/framework/Magento/TestFramework/Utility/"
         }
     },
-    "version": "2.3.5-p1",
+    "version": "2.3.3",
     "minimum-stability": "stable",
-    "repositories": [
-        {
+    "repositories": {
+        "0": {
             "type": "composer",
             "url": "https://repo.magento.com/"
+        },
+        "zero1": {
+            "type": "composer",
+            "url": "http://packages.zero1.co.uk/"
         }
-    ],
+    },
     "extra": {
         "magento-force": "override"
+        
     }
 }
