@@ -16,18 +16,21 @@ INPUT="$1-$2"
 case $INPUT in
         "$ARGUMENT_STEP_BEFORE_COMPOSER-$ARGUMENT_COMPARISON_AHEAD")
             set -xe
-            # do something\a
+            # do something
             ;;
         "$ARGUMENT_STEP_BEFORE_COMPOSER-$ARGUMENT_COMPARISON_IDENTICAL")
             set -xe
-	        ;;
+            # do something. set to exec
+            ;;
         "$ARGUMENT_STEP_BEFORE_COMPOSER-$ARGUMENT_COMPARISON_BEHIND")
             set -xe
             # do something
             ;;
         "$ARGUMENT_STEP_BEFORE_MAGENTO_COMMANDS-$ARGUMENT_COMPARISON_AHEAD")
             set -xe
-	        ;;
+            ~/htdocs/mdoq/migrate.sh
+
+            ;;
         "$ARGUMENT_STEP_BEFORE_MAGENTO_COMMANDS-$ARGUMENT_COMPARISON_IDENTICAL")
             set -xe
             # do something
@@ -41,54 +44,31 @@ case $INPUT in
             # do something
             ;;
         "$ARGUMENT_STEP_BEFORE_COMMON_TOOLS-$ARGUMENT_COMPARISON_IDENTICAL")
-            set -xe	
-	
+            set -xe
+            # do something
             ;;
         "$ARGUMENT_STEP_BEFORE_COMMON_TOOLS-$ARGUMENT_COMPARISON_BEHIND")
             set -xe
             # do something
-            ;;
-        "$ARGUMENT_STEP_BEFORE_DATA_MIGRATION-$ARGUMENT_COMPARISON_AHEAD")
-            set -xe
-            # do something
-
-            ;;
-        "$ARGUMENT_STEP_BEFORE_DATA_MIGRATION-$ARGUMENT_COMPARISON_IDENTICAL")
-            set -xe
-            ;;
-        "$ARGUMENT_STEP_BEFORE_DATA_MIGRATION-$ARGUMENT_COMPARISON_BEHIND")
-            set -xe
-            # do something
-            ;;
-            
-        "$ARGUMENT_STEP_AFTER_DATA_MIGRATION-$ARGUMENT_COMPARISON_AHEAD")
-            set -xe
-            # do something
-            ;;
-        "$ARGUMENT_STEP_AFTER_DATA_MIGRATION-$ARGUMENT_COMPARISON_IDENTICAL")
-            set -xe
-            # do something
-            ;;
-        "$ARGUMENT_STEP_AFTER_DATA_MIGRATION-$ARGUMENT_COMPARISON_BEHIND")
-            set -xe
-            # do something
-            ;;
-            
-        "$ARGUMENT_STEP_FINAL-*")
-            set -xe            
-            
-            bin/magento config:set --lock-config admin/security/use_case_sensitive_login 0
-			bin/magento config:set --lock-config admin/captcha/enable 0
             ;;
         "$ARGUMENT_STEP_FINAL-$ARGUMENT_COMPARISON_AHEAD")
             set -xe
             ;;
         "$ARGUMENT_STEP_FINAL-$ARGUMENT_COMPARISON_IDENTICAL")
             set -xe
+            # do something
             ;;
         "$ARGUMENT_STEP_FINAL-$ARGUMENT_COMPARISON_BEHIND")
             set -xe
             # do something
+            ;;
+        "$ARGUMENT_STEP_FINAL-*")
+            set -xe
+            bin/magento config:set --lock-config admin/security/use_case_sensitive_login 0
+            bin/magento config:set --lock-config admin/captcha/enable 0
+            bin/magento setup:upgrade;
+            bin/magento cache:enable;
+            bin/magento indexer:reindex;
             ;;
         *)
             echo "input not recognized: $INPUT"
