@@ -72,16 +72,12 @@
             "Magento\\TestFramework\\Utility\\": "dev/tests/static/framework/Magento/TestFramework/Utility/"
         }
     },
-    "version": "2.3.3",
+    "version": "2.3.5-p1",
     "minimum-stability": "stable",
     "repositories": {
         "0": {
             "type": "composer",
             "url": "https://repo.magento.com/"
-        },
-        "zero1": {
-            "type": "composer",
-            "url": "http://packages.zero1.co.uk/"
         }
     },
     "extra": {
