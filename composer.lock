@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "07fb79ef4ecee3aa36777d149bd94a33",
+    "content-hash": "21ef19fc533c7fb7cc24d877ef98bf8b",
     "packages": [
         {
             "name": "2tvenom/cborencode",
@@ -15888,6 +15888,40 @@
                 "smtp"
             ],
             "time": "2021-06-03T00:44:41+00:00"
+        },
+        {
+            "name": "markshust/magento2-module-disabletwofactorauth",
+            "version": "1.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/markshust/magento2-module-disabletwofactorauth.git",
+                "reference": "b45d0cefc320a6f37e4c9972ea0509c3ffb70432"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/markshust/magento2-module-disabletwofactorauth/zipball/b45d0cefc320a6f37e4c9972ea0509c3ffb70432",
+                "reference": "b45d0cefc320a6f37e4c9972ea0509c3ffb70432",
+                "shasum": ""
+            },
+            "require": {
+                "magento/framework": ">=103",
+                "php": ">=7.3"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "MarkShust\\DisableTwoFactorAuth\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "The DisableTwoFactorAuth module provides the ability to disable two-factor authentication.",
+            "time": "2021-02-22T16:57:59+00:00"
         },
         {
             "name": "mdoq/module-connector",

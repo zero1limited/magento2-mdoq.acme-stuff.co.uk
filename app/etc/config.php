@@ -314,6 +314,7 @@ return [
         'Klarna_Kp' => 1,
         'Mageplaza_Core' => 1,
         'Mageplaza_Smtp' => 1,
+        'MarkShust_DisableTwoFactorAuth' => 1,
         'Mdoq_Connector' => 1,
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeGraphQl' => 1,

@@ -36,6 +36,7 @@
         "magento/product-community-edition": "2.4.0",
         "magento/sample-data-media": "100.4.*",
         "mageplaza/module-smtp": "^4.4",
+        "markshust/magento2-module-disabletwofactorauth": "^1.1",
         "mdoq/module-connector": "^1.4"
     },
     "autoload": {
