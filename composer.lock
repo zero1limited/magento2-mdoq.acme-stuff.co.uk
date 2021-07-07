@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "de74356b00706a96c028364a8583c305",
+    "content-hash": "5756569751bce09df15802cccf132a55",
     "packages": [
         {
             "name": "2tvenom/cborencode",
@@ -18978,6 +18978,68 @@
                 "stylesheet"
             ],
             "time": "2019-11-06T18:30:11+00:00"
+        },
+        {
+            "name": "yireo/magento2-next-gen-images",
+            "version": "0.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yireo/Yireo_NextGenImages.git",
+                "reference": "caf6dc41c46edc44302b3e66fae31b809f8d2c3a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yireo/Yireo_NextGenImages/zipball/caf6dc41c46edc44302b3e66fae31b809f8d2c3a",
+                "reference": "caf6dc41c46edc44302b3e66fae31b809f8d2c3a",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gd": "*",
+                "ext-json": "*",
+                "ext-pcre": "*",
+                "magento/framework": "^101.0.1|^101.1|^102.0|^103.0",
+                "magento/module-backend": "^100.0|^101.0|^102.0",
+                "magento/module-config": "^101.0.0|^101.1.0",
+                "magento/module-page-cache": "^100.0",
+                "php": ">=7.1.0",
+                "psr/log": "^1.0"
+            },
+            "require-dev": {
+                "bitexpert/phpstan-magento": "^0.3.0",
+                "composer/composer": "*@dev",
+                "phpstan/phpstan": "^0.12.32",
+                "phpunit/phpunit": "*"
+            },
+            "suggest": {
+                "yireo/magento2-webp2": "Support for WebP2 images"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "psr-4": {
+                    "Yireo\\NextGenImages\\": ""
+                },
+                "files": [
+                    "registration.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Jisse Reitsma (Yireo)",
+                    "email": "jisse@yireo.com"
+                }
+            ],
+            "description": "Magento 2 module to add NextGen images support to the Magento frontend",
+            "homepage": "https://www.yireo.com/software/magento-extensions/next-gen-images",
+            "keywords": [
+                "Yireo",
+                "magento",
+                "magento 2"
+            ],
+            "time": "2021-06-29T10:56:44+00:00"
         },
         {
             "name": "yotpo/magento2-module-yotpo-reviews",
