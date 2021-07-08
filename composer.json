@@ -10,11 +10,11 @@
         "preferred-install": "dist",
         "sort-packages": true
     },
-    "version": "2.4.0",
+    "version": "2.4.2",
     "require": {
+        "magento/product-community-edition": "2.4.2",
+        "magento/composer-root-update-plugin": "~1.1",
         "cweagans/composer-patches": "^1.7",
-        "magento/composer-root-update-plugin": "~1.0",
-        "magento/product-community-edition": "2.4.0",
         "mageplaza/module-smtp": "^4.4",
         "markshust/magento2-module-disabletwofactorauth": "^1.1",
         "mdoq/module-connector": "^1.4"
@@ -43,7 +43,7 @@
     },
     "require-dev": {
         "allure-framework/allure-phpunit": "~1.2.0",
-        "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
         "friendsofphp/php-cs-fixer": "~2.16.0",
         "lusitanian/oauth": "~0.8.10",
         "magento/magento-coding-standard": "*",
